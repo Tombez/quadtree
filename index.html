@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>Map Deving</title>
+	<script src="./quadtree.js"></script>
+
+	<style>
+		body {
+			margin: 0px; overflow: hidden; background: black; color: white;
+		}
+		#quadOptions {
+			display: none; position: absolute; background: white; color: black; padding: 5px; outline: 1px solid black;
+		}
+		.button {
+			cursor: pointer;
+			user-select: none;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div id="quadOptions" onclick="contextmenuSelect(event)">
+	    <span class="button" data-onclick="addPoint">Add Point</span>
+	    <hr>
+	    <span class="button" data-onclick="add64Random">Add 64 Random Points</span>
+	    <hr>
+	    <span class="button" data-onclick="highlightBox">Highlight Box</span>
+	    <!-- <hr>
+	    <span class="button" data-onclick="removePoint">Remove Nearest Point</span> -->
+	</div>
+
+	<canvas id="canvas" width="512" height="512" data-contextmenu="quadOptions"></canvas>
+	<script src="./quadtreeDevelopment.js"></script>
+	<p style="font-size: 20px;">Right click to do stuff!</p>
+
+</body>
+
+</html>
